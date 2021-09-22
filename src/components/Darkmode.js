@@ -38,7 +38,7 @@ export default function Darkmode(props) {
     }*/
     return (
         <div>
-            <div class="row bg-dark text-white my-1 ">
+            <div class="row bg-dark text-white my-1 " style={{width: '100.75vw',}}>
                 <div class={`col-9 my-1 text-right ${props.palette}`}>
                     Choose Color : 
                     <input className="btn mx-1 " onClick={props.red} style={{backgroundColor:"#440808", width:"25px", height: "25px", borderRadius: "50%",}} />

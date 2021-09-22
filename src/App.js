@@ -120,8 +120,8 @@ function App() {
       
       <Navbar title="WebSol"></Navbar>
       <Darkmode handleDark={handleDark}  mode={mode} palette={palette} red={red} green={green} purple={purple}></Darkmode>
-      <Alert alert={alert}/>
-      <div className = "container pt-5"  style={dark}>
+      <div style={{height: '50px',}}><Alert alert={alert}/></div>
+      <div className = "container my-1 py-3"  style={dark}>
 
       <Switch>
 
@@ -130,7 +130,7 @@ function App() {
           </Route>
           
           <Route exact path="/">
-          <TextForm showAlert={showAlert} heading = "First Form"></TextForm>
+          <TextForm showAlert={showAlert} heading = "WebSol - Word  counter, Character counter, Remove space "></TextForm>
           </Route>
 
       </Switch>   
