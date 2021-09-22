@@ -60,30 +60,7 @@ export default function TextForm(props) {
             
                 
                 <h1 className="mt-3">{props.heading}</h1>
-                {/*<div class="form-group">
-                    <label htmlFor="exampleFormControlInput1">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
-                </div>
-                <div class="form-group">
-                    <label htmlFor="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label htmlFor="exampleFormControlSelect2">Example multiple select</label>
-                    <select multiple class="form-control" id="exampleFormControlSelect2">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    </select>
-                </div>*/}
+                
                 <div class="form-group">
                     <label htmlFor="exampleFormControlTextarea1"></label>
                     <textarea class="form-control" value={text} onChange={handleOnChange} placeholder="Enter Text Here" id="exampleFormControlTextarea1" rows="9"></textarea>
@@ -97,8 +74,8 @@ export default function TextForm(props) {
                 
                 <div className="my-4">
                     <h3>Your Text Summary</h3>
-                    <p>Words in your text {text.split(" ").filter((element)=>{return element.length!==0}).length}  ...  Characters in text {text.length}</p>
-                    <p>Can be read in {0.5 * text.split(" ").length} seconds </p>
+                    <p>Words in your text {text.split(/\s+/).filter((element)=>{return element.length!==0}).length}  ...  Characters in text {text.length}</p>
+                    <p>Can be read in {0.5 * text.split(" ").filter((element)=>{return element.length!==0}).length} seconds </p>
                 </div>
 
                 <div className="my-4">
